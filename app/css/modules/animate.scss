@@ -1,0 +1,11 @@
+@import "../mixins";
+
+.fade-in-animate {
+  @include transition(opacity 2s);
+  visibility: hidden;
+  opacity: 0;
+  &.visible {
+    visibility: visible;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,18 @@
+@import "../mixins";
+
+.b-short-articles__item {
+  margin-bottom: 10px;
+}
+
+.f-short-articles__item {
+  font-family: $f-second;
+  a {
+    @include font(14, 20);
+    text-decoration: underline;
+  }
+}
+
+.f-short-articles__item-date {
+  @include font(12, 16);
+  color: $c-4;
+}

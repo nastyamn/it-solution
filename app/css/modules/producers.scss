@@ -1,0 +1,11 @@
+@import "../mixins";
+
+.b-producers {
+  @include column(100%, 2%, 2);
+  .b-column {
+    margin: 5px 0 10px;
+  }
+  img {
+    @include img-responsive;
+  }
+}

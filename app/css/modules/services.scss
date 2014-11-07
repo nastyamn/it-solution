@@ -1,0 +1,33 @@
+@import "../mixins";
+
+.b-services-wrap {
+  margin-bottom: 15px;
+}
+
+.b-services__item {
+  background: $c-white;
+  border-radius: 2px;
+  margin: 10px 0;
+  padding: 15px 7%;
+  &:hover {
+    box-shadow: 0 0 10px 0 rgba(180, 180, 180, 0.3);
+  }
+}
+
+.b-services__item_title {
+  .fa {
+    margin-right: 5px;
+  }
+}
+
+.f-services__item_title {
+  @include font(20);
+  color: $c-default;
+  font-family: $f-default-b;
+  text-transform: uppercase;
+  .fa {
+    font-size: 120%;
+    vertical-align: middle;
+  }
+
+}

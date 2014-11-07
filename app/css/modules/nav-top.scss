@@ -1,0 +1,31 @@
+@import "../mixins";
+
+.b-nav-top {
+  margin: 0;
+  padding: 0;
+  li {
+    display: block;
+    float: left;
+    padding: 0 12px;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  @media screen and (max-width: $break-tablet-p - 1) {
+    display: none;
+  }
+}
+
+.f-nav-top {
+  a {
+    @include font(16, 33);
+    font-family: $f-default-b;
+    text-transform: uppercase;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

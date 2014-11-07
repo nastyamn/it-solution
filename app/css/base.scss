@@ -1,0 +1,87 @@
+@import "../css/mixins.scss";
+@import "../css/normalize.css";
+
+* {
+  @include box-sizing;
+}
+
+body {
+  background: $c-1;
+  font-size: $default-fz + px;
+  font-family: $f-second;
+  line-height: $default-lh;
+}
+
+b, strong {
+  font-family: $f-default-b;
+  font-weight: normal;
+}
+
+.b-left {
+  float: left;
+}
+
+.b-right {
+  float: right;
+}
+
+.f-center {
+  text-align: center;
+}
+
+.f-left {
+  text-align: left;
+}
+
+.f-right {
+  text-align: right;
+}
+
+.b-remaining {
+  overflow: hidden;
+}
+
+h1 {
+  @include font(32, 32);
+  color: $c-default;
+  font-family: $f-default-b;
+  margin: 5px 0 15px 0;
+  text-transform: uppercase;
+}
+
+h2 {
+  @include font(20);
+  color: $c-black;
+  font-family: $f-default-b;
+  margin: 10px 0 10px 0;
+  text-transform: uppercase;
+}
+
+h3 {
+  @include font(20);
+  color: $c-dark;
+  font-family: $f-second;
+  margin: 10px 0 10px 0;
+  text-transform: uppercase;
+}
+
+h4 {
+  @include font(16, 24);
+  margin: 10px 0 10px 0;
+  text-transform: uppercase;
+}
+
+a {
+  color: $c-dark;
+  &:hover {
+    color: $c-default;
+  }
+}
+
+.f-more {
+  @include font(12);
+  color: $c-5;
+  font-family: $f-default-b;
+  text-decoration: underline;
+  text-transform: uppercase;
+}

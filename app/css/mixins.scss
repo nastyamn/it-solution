@@ -1,0 +1,135 @@
+@mixin clear-fix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+@mixin box-sizing {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin center {
+  margin: 0 auto;
+}
+
+$default-fz: 14;
+$default-lh: 1.6;
+
+@mixin font($size: $default-fz, $line: $size * $default-lh) {
+  font-size: ($size/$default-fz) + em;
+  line-height: ($line/$size);
+}
+
+@mixin img-responsive {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@mixin border-radius($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin transform($value) {
+  transform: $value;
+  -ms-transform: $value;
+  -webkit-transform: $value;
+}
+
+@mixin column($widthAll, $gutter, $col) {
+  @include clear-fix;
+  $colwidth: ($widthAll - ($gutter)*($col - 1)) / $col;
+  & > .b-column {
+    float: left;
+    margin-left: $gutter;
+    width: $colwidth;
+  }
+  & > .b-column:first-child,
+  & > .b-column:nth-child(#{$col}n+1) {
+    margin-left: 0;
+  }
+}
+
+@mixin alert($modulepostfix, $background, $border, $color) {
+  .b-alert-#{$modulepostfix} {
+    background: $background;
+    border: 1px solid $border;
+  }
+  .f-alert-#{$modulepostfix} {
+    color: $color;
+  }
+}
+
+@mixin button($name, $backgroundColor, $borderColor) {
+  .button-#{$name} {
+    background-color: $backgroundColor;
+    border-color: $borderColor;
+    &:hover {
+      background-color: $borderColor;
+    }
+  }
+}
+
+$f-default: 'pf_din_text_cond_proregular', sans-serif;
+$f-default-it: 'pf_din_text_cond_proitalic', sans-serif;
+$f-default-l: 'pf_din_text_cond_prolight', sans-serif;
+$f-default-b: 'pf_din_text_cond_probold', sans-serif;
+$f-default-b-it: 'pf_din_text_cond_proBdIt', sans-serif;
+$f-default-m: 'pf_din_text_cond_promedium', sans-serif;
+$f-default-m-it: 'pf_din_text_cond_proMdIt', sans-serif;
+$f-default-l-it: 'pf_din_text_cond_proLtIt', sans-serif;
+$f-default-x: 'pf_din_text_cond_proXBlk', sans-serif;
+$f-default-x-it: 'pf_din_text_cond_proXBlkIt', sans-serif;
+$f-default-x-th: 'pf_din_text_cond_proXTh', sans-serif;
+$f-default-x-th-it: 'pf_din_text_cond_proXThIt', sans-serif;
+$f-default-th: 'pf_din_text_cond_prothin', sans-serif;
+$f-default-th-it: 'pf_din_text_cond_proThIt', sans-serif;
+
+$f-second: Arial, sans-serif;
+
+$f-icons: 'FontAwesome';
+
+$c-white: #fff;
+$c-black: #000;
+$c-default: #d9a273;
+$c-dark: #223249;
+$c-1: #f3f3f3;
+$c-2: #f0f0f0;
+$c-3: #c2c2c2;
+$c-4: #b4b4b4;
+$c-5: #b30000;
+$c-6: #b7b7b7;
+
+$containerWidth: 1170px;
+
+$break-tablet-l: 1024px;
+$break-tablet-p: 768px;
+$break-medium: 980px;
+$break-smart-l: 640px;
+$break-smart-p: 480px;
+$break-sm: 320px;

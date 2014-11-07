@@ -1,0 +1,40 @@
+@import "../mixins";
+
+.b-carousel-reset {
+  .bx-wrapper {
+    margin: 0;
+    .bx-viewport {
+      background: none;
+      border: 0;
+      box-shadow: none;
+      left: 0;
+    }
+  }
+}
+
+.b-carousel-primary {
+  .bx-pager {
+    position: relative;
+    bottom: auto;
+    .bx-pager-item {
+      vertical-align: middle;
+    }
+
+    &.bx-default-pager {
+      a {
+        background: $c-default;
+        &:hover {
+          background: $c-5;
+        }
+
+        &.active {
+          background: $c-5;
+          border-radius: 50%;
+          height: 18px;
+          width: 18px;
+        }
+      }
+    }
+  }
+}
+

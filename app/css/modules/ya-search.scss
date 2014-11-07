@@ -1,0 +1,41 @@
+@import "../mixins";
+
+.b-ya-search {
+  width: 100%;
+  @media screen and (max-width: $break-medium - 1) {
+    display: none;
+  }
+  #ya-site-form0 .ya-site-form__search, #ya-site-form0 .ya-site-form__search td, #ya-site-form0 .yaform__precise-i {
+    background: none !important;
+  }
+  #ya-site-form0 .ya-site-form__form .ya-site-form__input-text {
+    border: 1px solid $c-3 !important;
+    border-radius: 3px 0 0 3px !important;
+    height: 33px !important;
+    padding-left: 15px !important;
+  }
+  #ya-site-form0 .ya-site-form__search-input {
+    padding: 0;
+  }
+  .ya-site-form__arrow-a,
+  #ya-site-form0 .ya-site-form__arrow-wrap {
+    display: none;
+  }
+  #ya-site-form0 .ya-site-form__submit {
+    border-radius: 0 3px 3px 0;
+    border: 0;
+    background: $c-dark;
+    height: 33px;
+    margin: 0;
+    padding: 0 20px;
+  }
+}
+
+.f-ya-search {
+  #ya-site-form0 .ya-site-form__submit {
+    @include font(15);
+    color: $c-white !important;
+    font-family: $f-default-b;
+    text-transform: uppercase;
+  }
+}

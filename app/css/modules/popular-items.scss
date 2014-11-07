@@ -1,0 +1,50 @@
+@import "../mixins";
+
+.b-popular-item {
+  background: $c-white;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.b-popular-item__img {
+  height: 153px;
+  overflow: hidden;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.b-popular-item__info {
+  padding: 10px 5%;
+}
+
+.f-popular-item__name {
+  @include font(14, 20);
+  color: $c-black;
+  text-decoration: underline;
+}
+
+.b-popular-item__specifications {
+  @include column(100%, 2%, 2);
+}
+
+.f-popular-item__specifications {
+  @include font(12);
+  font-family: $f-second;
+  .b-column:first-child {
+    color: $c-6;
+  }
+  .b-column:last-child {
+    color: $c-black;
+  }
+}
+
+.f-popular-item__price {
+  @include font(20);
+  font-family: $f-default-b;
+}
+
+.b-popular-item__btn {
+  padding: 15px 0 10px;
+}

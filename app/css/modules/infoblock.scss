@@ -1,0 +1,18 @@
+@import "../mixins";
+
+.b-infoblock {
+  background: $c-white;
+  margin-bottom: 20px;
+  padding: 20px 9% 10px;
+}
+
+.b-infoblock__title {
+  margin-bottom: 10px;
+}
+
+.f-infoblock__title {
+  @include font(20);
+  color: $c-dark;
+  font-family: $f-default-b;
+  text-transform: uppercase;
+}
